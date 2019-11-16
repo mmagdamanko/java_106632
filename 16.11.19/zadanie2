@@ -1,0 +1,49 @@
+package java;
+
+public Figure implements NumbersOfSidesPrintable
+{
+	public static void main(String[] args) 
+	{
+		
+	
+	private String rodzaj; //podział na figury płaskie, foremne, przestrzenne itp
+	private String ksztalt; // podział na koło, kwadrat, bryłę itp
+	private int iloscWierzcholkow;
+	private int iloscKatow;
+	for (int i=0; i <liczbaBokow; i++)
+		public Figure (String rodzaj, String ksztalt, String iloscWierzcholkow, String iloscKatow);
+	{
+		int figura[i];
+		this.rodzaj = rodzaj;
+		this.ksztalt = ksztalt;
+		this.iloscWierzcholkow;
+		this.iloscKatow;
+	}
+		
+	
+	public interface NumberOfSidesPrintable;
+	{
+	
+		void printSidesNumber();
+	} 
+	public interface Resetable
+	{
+		void resetAllAttributes();
+	} public class Zadanie
+	{
+		public static void main(String[] args)
+		{
+			public class Square implements Figure, Resetable
+			{
+				private String rodzaj;
+				private String ksztalt;
+				private boolean ilosc wierzcholkow;
+				private boolean ilosc katow;
+			}
+			Square s1 = new Square();
+			s1.resetAllAttributes();
+			s1.printSidesNumber();
+		}
+}
+}
+}
