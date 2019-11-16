@@ -1,0 +1,13 @@
+Różnica między klasą abstrakcyjną, a interfejsem: 
+- dana klasa może dziedziczyć tylko po jednej klasie, a może implementować wiele interfejsów. 
+Druga rzecz, to w klasie abstrakcyjnej można definiować ciała metod,
+ a w interfejsach występują tylko sygnatury metod.
+ 
+ Oprócz tego to interfejs nie różni się jakoś znacznie od klasy poza szeregiem ograniczeń:
+*  wszystkie metody muszą być public abstract,
+* zystkie pola muszą być public static final,
+
+Interfejs gwarantuje, że klasy implementujące go posiadają metody wymienione w tym interfejsie,
+ ale nic poza tym. 
+Klasa abstrakcyjna gwarantuje, że klasy ją rozszerzające dziedziczą właściwości po niej,
+ oraz implementują metody abstrakcyjne. Klasa może rozszerzać tylko jedną inną klasę (nieważne czy abstrakcyjną)
