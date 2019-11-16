@@ -1,0 +1,68 @@
+public class Teacher implements UniversityPerson
+{
+	public String pozycja = "Teacher";
+	public String imie;
+	public String nazwisko;
+	public int dataUrodzenia;
+	public String wyksztalcenie;
+	public String tutulNaukowy;
+	void zrobKolokwium(String temat);
+	void zrobEgzamin(String temat);
+}
+
+public class Student implements Person
+{
+	public int nrIndeksu;
+	public int semestr;
+	public String imie;
+	public String nazwisko;
+	public int dataUrodzenia;
+	void zlozPodanie(String powod);
+	void oplacCzesne;
+	void napiszDobrzeEgzamin;
+	void zdobadzTytul;
+}
+{
+public class Person	
+public String imie;
+public String nazwisko;
+public String zawod;
+public String dataUrodzenia;
+void idzDoPracy;
+
+
+}
+public class ZadaniePerson
+{	
+	public static void main(String[] args)
+	
+	{
+			
+		Student magdalenaManko = magdalenaManko
+			magdalenaManko = new Student();
+			magdalenaManko.nrIndeksu = 106632;
+			magdalenaManko.semestr = 5;
+			magdalenaManko.imie = "Magdalena";
+			magdalenaManko.nazwisko = "Mańko";
+			magdalenaManko.dataUrodzenia = "27-09-1996";
+			magdalenaManko.zlozPodanie("Powtórzenie roku"."Egzamin komisyjny","Uwzględnienie osiągnięć");
+			magdalenaManko.oplacCzesne;
+			magdalenaManko.napiszDobrzeEgzamin;
+			magdalenaManko.zdobadzTytul;
+			
+			Teacher janKowalski = new Teacher();
+			janKowalski.imie = "Jan";
+			jakKowalski.nazwisko = "Kowalski";
+			janKowalski.dataUrodzenia = "29-05-1972";
+			janKowalski.wyksztalcenie = "Wyższe";
+			janKowalski.tytulNaukowy = "Doktor";
+			janKowalksi.zrobKolokwium("Kolejka w c++");
+			
+			Person jakubMalinowski = jakubMalinowski
+			jakubMalinowski.imie ="Jakub"	;	
+			jakubMalinowski.nazwisko = "Malinowski";
+			jakubMalinowski.zawod = "Ekonomista";
+			jakubMalinowski.dataUrodzenia = "17-10-1978";
+			jakubMalinowski.idzDoPracy;
+	}
+}
