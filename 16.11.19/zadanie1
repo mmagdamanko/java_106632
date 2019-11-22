@@ -1,37 +1,95 @@
-package java;
+// Zaproponuj implementacje klasy abstrakcyjnej Samochod oraz klasy dziedziczacej ja: Mercedes.
+// Stworz pola, metody, metody abstrakcyjne itp.
+// Zaprezentuj działanie klasy w ZadanieCar.
 
-public abstract class Samochod 
-{
-	private String marka;
-	private String kolor;
-	private int maxPredkosc;
-	
-	public abstract  void gas();
-	public abstract void hamuj();
-	
-	System.out.println("To jest metoda gas z klasy Samochód");
-	
-	public void setMarka(String marka)
-	System.out.println("Domyślny konstruktor z klasy Samochód");
-	{
-	this.marka = marka;
-	}
-	public void setMaxPredkosc(int maxPredkosc)
-	{
-		this.maxPredkosc = maxPredkosc;
-	}
-	
-		
-	}
-	
-	public abstract class Mercedes extends Samochod 
-	public Samochod();
-	System.out.println("Domyślny konstruktor z klasy Mercedes");
-	public Samochod(int maxPredkosc, int kolor);
-	
-	System.out.println("NieDomyślny konstruktor z klasy Samochod");
 
-	{
-	
-	
+import org.w3c.dom.ls.LSOutput;
+
+public class ZadanieCar {
+
+    public static void main(String[] args) {
+
+        //Utowrzenie instancji w200 z konstruktorem domyslnym
+        Mercedes w220 = new Mercedes();
+
+        //Utowrzenie instancji w200 z konstruktorem niedomyslnym
+        Mercedes clc = new Mercedes("Mercedes", "Biały", 2018, 250);
+
+        System.out.println();
+        System.out.println("CLC marka: " + clc.marka );
+        System.out.println("CLC kolor: " + clc.kolor );
+        System.out.println("CLC rok produkcji: " + clc.rokProdukcji );
+        System.out.println("CLC predkosc maksymalna: " + clc.predkoscMaksymalna);
+
+        System.out.println();
+        clc.hamuj();
+        clc.gaz();
+    }
+
 }
+
+abstract class Samochod
+{
+    String marka;
+    String kolor;
+    int rokProdukcji;
+    double predkoscMaksymalna = 200;
+
+    //Konstruktor domyślny klasy Samochod
+    Samochod()
+    {
+        System.out.println("To jest konstruktor domyslny klasy Samochód");
+    }
+    //Nie domyślny konstruktor klasy Samochod
+    Samochod(String marka, String kolor, int rokProdukcji, double predkoscMaksymalna)
+    {
+        this.marka = marka;
+        this.kolor = kolor;
+        this.rokProdukcji = rokProdukcji;
+        this.predkoscMaksymalna = predkoscMaksymalna;
+
+        System.out.println("To jest niedomyslny konstruktor klasy Samochod");
+    }
+
+    //Metody klasy Samochod
+    void gaz()
+    {
+        /*
+        Tu są instrukcje odnośnie metody gazu
+         */
+        System.out.println("To jest metoda gaz z klasy Samochod");
+    }
+    abstract void hamuj();
+
+}
+
+class Mercedes extends Samochod
+{
+    boolean abs;
+    double cena;
+
+    //Konstruktor domyślny klasy Mercedes
+    Mercedes()
+    {
+        System.out.println("To jest konstruktor domyslny klasy Mercedes");
+    }
+
+    Mercedes(String marka, String kolor, int rokProdukcji, double predkoscMaksymalna)
+    {
+        super(marka, kolor, rokProdukcji,predkoscMaksymalna);
+        System.out.println("To jest niedomyslny konstruktor klasy Samochod");
+    }
+
+    Mercedes(String marka, String kolor, int rokProdukcji, double predkoscMaksymalna, double cena)
+    {
+        super(marka, kolor, rokProdukcji,predkoscMaksymalna);
+        this.cena = cena;
+        System.out.println("To jest niedomyslny konstruktor klasy Mercedes z 5 parametrami");
+    }
+
+    void hamuj()
+    {
+        System.out.println("To jest metoda hamuj z klasy Mercedes");
+    }
+}
+
