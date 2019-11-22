@@ -17,7 +17,9 @@ class Zadanie {
 
 public class Square extends Figure implements Resetable
 {
-    private int liczbaBokow;
-    private boolean czyWypukla;
+    private String rodzaj;
+    private String ksztalt;
+    private int iloscWierzcholkow;
+    private int iloscKatow;
 }
 
