@@ -8,8 +8,12 @@
 class Zadanie { 
 	
 	public static void main(String[] args) {
-		
+	
 	// podaj przyklad zastosowania
+		
+		Square s1 = new Square();
+		s1.resetAllAttributes();
+		s1.printSidesNumber();
 
 	}
 }
