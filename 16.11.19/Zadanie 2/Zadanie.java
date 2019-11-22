@@ -13,3 +13,11 @@ class Zadanie {
 
 	}
 }
+
+
+public class Square extends Figure implements Resetable
+{
+    private int liczbaBokow;
+    private boolean czyWypukla;
+}
+
