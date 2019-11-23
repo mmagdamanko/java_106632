@@ -10,7 +10,27 @@ public class ZadaniePerson {
 
     public static void main(String[] args) {
 
+         VipPerson jan = new VipPerson("Jan", "Nowak", "elektryk", "niebieski", "1992-05-05", "średnie", 190, 105, true);
+        System.out.println();
+        System.out.println("Czy osoba to VipPerson: " + jan.czyVipPerson);
+        System.out.println("Aktualny piorytet: " + jan.priorytet);
+        jan.setPriorytet(5);
 
+        Teacher tomasz = new Teacher("Tomasz", "Okoń", "wykładowca", "brązowy", "1992-05-05", "wyzsze", 190, 80);
+        tomasz.stopienNaukowy = "profesor nadzwyczajny";
+        System.out.println();
+        System.out.println("Stopień naukowy to:" + tomasz.stopienNaukowy);
+        tomasz.ustalEgzamin();
+        tomasz.zrobKolokwium();
+
+        Student jacek = new Student();
+        System.out.println();
+        System.out.println("Aktualny status studenta: " + jacek.statusStudenta);
+        jacek.czyNadalStudiuje();
+        jacek.nieIdzNaWyklady();
+        jacek.idzNaEgzamin();
+        jacek.statusStudenta =  false;
+        jacek.czyNadalStudiuje();
     }
 
 }
@@ -52,7 +72,7 @@ abstract class Person
      }
 }
 
-abstract class VipPerson extends Person
+class VipPerson extends Person
 {
     boolean czyVipPerson;
     int priorytet = 1;
@@ -84,6 +104,15 @@ abstract class UniversityPerson extends Person
 {
     String nazwaUczelni;
 
+    UniversityPerson()
+    {
+
+    }
+    UniversityPerson (String imie, String nazwisko, String zawod, String kolorOczu, String dataUrodzenia, String wyksztalcenie, double wzrost, double waga)
+    {
+        super(imie, nazwisko, zawod, kolorOczu, dataUrodzenia, wyksztalcenie, wzrost, waga);
+    }
+
 }
 
 class Teacher extends UniversityPerson
@@ -91,6 +120,15 @@ class Teacher extends UniversityPerson
     String stopienNaukowy;
     boolean darmoweObiady = true;
     boolean dostepDoDziekanatu = true;
+
+    Teacher()
+    {
+
+    }
+    Teacher (String imie, String nazwisko, String zawod, String kolorOczu, String dataUrodzenia, String wyksztalcenie, double wzrost, double waga)
+    {
+        super(imie, nazwisko, zawod, kolorOczu, dataUrodzenia, wyksztalcenie, wzrost, waga);
+    }
 
     void zrobKolokwium()
     {
@@ -112,6 +150,15 @@ class Student extends UniversityPerson
     int aktualnyRokStudiow;
     int aktualnySemestr;
 
+    Student()
+    {
+
+    }
+    Student (String imie, String nazwisko, String zawod, String kolorOczu, String dataUrodzenia, String wyksztalcenie, double wzrost, double waga)
+    {
+        super(imie, nazwisko, zawod, kolorOczu, dataUrodzenia, wyksztalcenie, wzrost, waga);
+    }
+
     void nieIdzNaWyklady()
     {
         System.out.println("Dzisiaj zostanę w domu...");
@@ -119,6 +166,13 @@ class Student extends UniversityPerson
     void idzNaEgzamin()
     {
         System.out.println("Ehhh dzisiaj egzamin... Nic nie umiem...");
+    }
+    void czyNadalStudiuje()
+    {
+        if (statusStudenta == true)
+            System.out.println("Nadal Studiujesz");
+        else
+            System.out.println("Zostałeś wyrzucony");
     }
 
 }
