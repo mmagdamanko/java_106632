@@ -1,0 +1,79 @@
+
+public class People 
+{
+	public static void main (String[] args)
+	{
+		String imie;
+		String nazwisko;
+		int wiek;
+		
+
+		System.out.print/n();
+       
+        {
+        	void addPeopleToList (List<People>list)
+        	List<String>listaString = new ArrayList<>();
+        	listString.add(imie);
+        	listString.add(nazwisko);
+        	listInt.add(wiek);
+        	
+        	List<Person> people = new ArrayList<>();
+    		people.add(new Person("Jan", "Kowalski", "45"));
+    		people.add(new Person("Krzysztof", "Krawczyk", "75"));
+    		people.add(new Person("Szymon", "Niewęgłowski", "39"));
+    		
+    		
+    		for(int i = 0; i < people.size(); i++)
+    		{
+    			System.out.println(imie + " " + nazwisko + " " + people.get(i));
+    			i++;
+    			
+    			System.out.println(" ");
+    			
+    			System.out.println(" wiek: " + people.get(i));
+    			
+    			for(int i = 0; i < people.size(); i++)
+    			{
+    				System.out.println(imie + " " + nazwisko + " " + people.get(i));
+    				i++;
+    				System.out.println(" ");
+    				 
+    				System.out.println(" wiek: " + people.get(i));
+    		}
+        
+    			public class People2 implements Comparable < People > 
+    			
+    		 	list.add(newPeople());
+    			{
+    				if(this.wiek == o.wiek)
+    				{
+    					return 0;
+    				} else if(this.wiek > o.wiek) 
+    				{
+    					return 1;
+    				} else {
+    					return -1;
+    				}
+    				
+    				public int compareTo(People o) 
+    				{
+    					return this.wiek.compareTo(o.wiek);
+    				}
+    				
+    				public int compareTo2(People o) 
+    				{
+    					return this.name.compareTo(o.name);
+    				}
+        	
+        	
+        }
+	}
+	
+	
+	
+}
+	}
+}
+
+  
+
