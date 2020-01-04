@@ -1,0 +1,64 @@
+// Stwórz klasę People (imię, nazwisko, wiek).
+// Utwórz List<People> i wrzuć tam kilka elementów.
+//	1) Spraw aby drukujšc wszystkie elementy: linijka System.out.println(person); drukowała dane o osobie w przystepnej formie.
+//	2) Pokaż przykład sortowania malejšco wg. wieku za pomocš interfejsu Comparable
+//	3) Pokaż przykład sortowania malejšco wg. nazwiska osoby przy użyciu komparatora
+
+package Zadanie4;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Collections;
+
+public class People2
+{
+
+    public static void main(String[] args)
+    {
+        List <People> list = new ArrayList <People>();
+
+        People people1 = new People("Asia", "Zubek", 12);
+        People people2 = new People("Julia", "Kłos", 15);
+        People people3 = new People("Zenek", "Olszewski", 22);
+        People people4 = new People("Kuba", "Kupczyk", 12);
+        People people5 = new People("Pola", "Polkowska", 5);
+
+        list.add(people1);
+        list.add(people2);
+        list.add(people3);
+        list.add(people4);
+        list.add(people5);
+
+        System.out.println("Drukowanie Listy poczatkowej");
+        for (People tmp: list)
+        {
+            System.out.println(tmp.printPeople());
+        }
+
+        Collections.sort(list, Collections.reverseOrder());
+        System.out.println("\nDrukowanie Listy posortowanej malejąco według wieku 'comparable' ");
+        for (People tmp: list)
+        {
+            System.out.println(tmp.printPeople());
+        }
+
+        Comparator<People> compareByNazwisko = new Comparator<People>()
+        {
+            @Override
+            public int compare(People o1, People o2) {
+                return o1.getNazwisko().compareTo(o2.getNazwisko());
+            }
+        };
+
+        Collections.sort(list, compareByNazwisko.reversed());
+
+        System.out.println("\nDrukowanie Listy posortowanej malejąco po nazwiskou przy uzyciu komparatora ");
+        for (People tmp: list)
+        {
+            System.out.println(tmp.printPeople());
+        }
+
+    }
+
+}
