@@ -1,141 +1,73 @@
+public class Main {
 
-public class People2
+    public static void main(String[] args)
+    {
+
+        try {
+            System.out.println("wykonam się bo jestem przed wyjątkiem (try)"); // Instrukcje przed wyjątkiem wykonają się
+            System.out.println(5 / 0);
+            System.out.println("Nie wykonam się, gdy zajdzie wyjatek "); // Instrukcje po wystąpieniu wyjątku nie zostaną wykonane
+        }
+        // java.lang.ArithmeticException - klasa zawierająca wyjątki
+        catch (ArithmeticException ex) // Nie musimy znać dokładnej nazwy wyjątku wystarczy, że użyjemy Klasy Exception
+                                        // Wszystkie wyjątki dziedziczą z superklasy Exception
+        {
+            System.out.println("\n instrukcja catch");
+            System.out.println("\n Powstał wyjątek: " + ex.getMessage());
+        }
+        finally
+        {
+            System.out.println("\n Coś co zawsze ZOSTANIE WYWOŁANE (finally)");
+        }
+            System.out.println("\n cokolwiek");
+
+        // Testowanie stworzonego przez nas wyjątku
+
+        System.out.println("\n Naszy wyjątek - testowanie");
+        int a = 10;
+
+        try
+        {
+            if(a == 10)
+                throw new NaszWyjatek("a jest równe 10 - wyjatek");
+            System.out.println(5/0); //Nie zostanie wypisane jeżeli w catch nie dodamy instrukcji odpowiedzialnej za
+                                    // obsługę tego wyjątku
+        }
+        catch (NaszWyjatek | ArithmeticException ex)
+        {
+            System.out.println(ex.getMessage());;
+        }
+
+
+        a =5;
+        try
+        {
+            if(a == 5)
+                throw new NaszWyjatek2("a jest równe 10 - wyjatek");
+            System.out.println(7/0);
+        }
+        catch (NaszWyjatek2 | ArithmeticException ex)
+        {
+            System.out.println(ex.getMessage());;
+        }
+
+
+
+    }
+}
+
+class NaszWyjatek extends Exception
 {
-	public static void main(String[] args)
-	{
-		//Set<Person> People2 = new equals < > ( );
-
-		private String imie;
-		private String nazwisko;
-		private int PESEL;
-		
-		 public People2 (String imie, String nazwisko, int PESEL)
-		 {
-		        this.imie = imie;
-		        this.nazwisko = nazwisko;
-		        this.PESEL = PESEL;
-		    }   
-	}   
-	 
-    public String imie ()
+    public NaszWyjatek(String string)
     {
-        return imie;
-    }   
- 
-    public String nazwisko() 
-    {
-        return nazwisko;
-    }   
- 
-    public int PESEL() 
-    {
-        return PESEL;
+        super(string);
     }
- 
- 
-    public boolean equals(Object obj) 
+}
+
+class NaszWyjatek2 extends RuntimeException
+{
+    public NaszWyjatek2(String string)
     {
-        if (obj == null)
-        {
-            return false;
-        }
-        if (obj instanceof People2)
-        {
-            People2 otherPeople2 = (People2)
-            		}   
-        
-        public String imie()
-        {
-            return imie;
-        }   
-     
-        public String nazwisko() 
-        {
-            return nazwisko;
-        }   
-     
-        public int PESEL()
-        {
-            return PESEL;
-        }
-     
-        @Override
-        public boolean equals(Object obj)
-        {
-            if (obj == null) {
-                return false;
-            }
-            if (obj instanceof People2)
-            {
-                People2 otherPeople2 = (People2) obj;
-                return imie.equals(otherPeople2.imie) &&
-                        nazwisko.equals(otherPeople2.nazwisko) &&
-                        PESEL == otherPeople.PESEL;
-            }
-            return false;
-        }
-     
-       
-        public int hashCode() {
-            return 17 * imie.hashCode() + 31 *nazwisko.hashCode() + 7 * PESEL;
-        } obj.
-            return imie.equals(otherPeople2.imie) &&
-                    nazwisko.equals(otherPeople2.nazwisko) &&
-                   PESEL == otherPeople2.PESEL;
-        }
-        return false;
+        super(string);
     }
- 
- 
-    public int hashCode() {
-        return 17 * imie.hashCode() + 31 * nazwisko.hashCode() + 7 * PESEL;
-    }
-		Set<Person> people = new HashSet < > ( );
-		
-		people.add(new Person("Jan", "Kowalski", "45"));
-		
-		people.add(new Person("Nataniel", "Sawczuk", "21"));
-		
-		people.add(new Person("Wioletta", "Piękna", "21"));
-		
-		people.add(new Person("Jan", "Kowalski", "45"));
-		
-		people.add(new Person("Marta", "Wiatrak", "23"));
-		
-		people.add(new Person("Jakub", "Chmurak","32"));
-		
-		people.add(new Person("Agnieszka", "Golec","51"));
-		
-		
-		
-		
-		
-		
-		System.out.println("imie == imie: " + (Jan == Jan));
-		
-		System.out.println("imie == imie: " + (new String("imie") == new String("imie")));
-		System.out.println("imie equals imie: " + new String("imie").equals(new String("imie")));
-		
-		System.out.println("nazwisko == nazwisko: " + (new String("nazwisko") == new String("nazwisko")));
-		System.out.println("nazwisko equals nazwisko: " + new String("nazwisko").equals(new String("nazwisko")));
-		
-		
-		System.out.println("wiek == wiek: " + (45 == 45));
-		System.out.println("wiek != wiek: " + (45 != 45));
-		
-		
-
-
-			Set<String> newset = new TreeSet < > ( ); 
-			public int compareTo(People o) 
-			{
-				return this.wiek.compareTo(o.wiek));
-			}
-			 
-	
-	
-	
-			}
-	
-	
 }
